@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Controle Despesas Viagem</string>
+    <string name="lblCodigo">Código</string>
+    <string name="lblDataInicial">Data Inicio da Viagem</string>
+    <string name="lblDataFinal">Data Final Viagem</string>
+    <string name="lblDestino">Destino</string>
+    <string name="lblKmInicial">Quilometragem Inicial</string>
+    <string name="lblKmFinal">Quilometragem Final</string>
+    <string name="lblIniciarViagem">Iniciar Viagem</string>
+    <string name="lblFinalizarViagem">Finalizar Viagem</string>
+    <string name="lblAdicionarDespesa">Adicionar Despesa</string>
+</resources>

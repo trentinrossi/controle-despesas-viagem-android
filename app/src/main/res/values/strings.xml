@@ -9,4 +9,14 @@
     <string name="lblIniciarViagem">Iniciar Viagem</string>
     <string name="lblFinalizarViagem">Finalizar Viagem</string>
     <string name="lblAdicionarDespesa">Adicionar Despesa</string>
+    <string name="lblViagemTrabalho">Trabalho</string>
+    <string name="lblPessoal">Pessoal</string>
+    <string name="lblLazer">Lazer</string>
+    <string name="lblReembolsar">Reembolsar</string>
+
+    <string name="lblDestino_mandatory">É obrigatório informar um destino</string>
+    <string name="lblKmInicial_mandatory">É obrigatório informar a quilometragem inicial</string>
+    <string name="lblKmFinal_mandatory">É obrigatório informar a quilometragem inicial</string>
+    <string name="lblTipoViagem_mandatory">É obrigatório informar um tipo de viagem</string>
+    <string name="lblLimparForm">Limpar Formulário</string>
 </resources>

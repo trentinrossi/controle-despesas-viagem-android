@@ -106,37 +106,87 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+        android:id="@+id/btnIniciarViagem"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="?attr/colorPrimaryDark"
+        android:onClick="iniciarViagem"
         android:text="@string/lblIniciarViagem"
-        app:layout_constraintEnd_toEndOf="@+id/editKmFinal"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroupTipoViagem"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editKmInicial"
-        app:layout_constraintTop_toBottomOf="@+id/editKmInicial" />
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnFinalizarViagem"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:enabled="false"
+        android:onClick="finalizarViagem"
+        android:text="@string/lblFinalizarViagem"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTipoViagem"
+        android:layout_width="141dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/editKmInicial"
+        app:layout_constraintStart_toStartOf="@+id/editKmInicial"
+        app:layout_constraintTop_toBottomOf="@+id/editKmInicial">
+
+        <RadioButton
+            android:id="@+id/radioButtonTrabalho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblViagemTrabalho" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPessoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPessoal" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLazer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblLazer" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxReembolsar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lblReembolsar"
+        app:layout_constraintStart_toStartOf="@+id/editKmFinal"
+        app:layout_constraintTop_toBottomOf="@+id/editKmFinal" />
+
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="323dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="@string/lblFinalizarViagem"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.805" />
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupTipoViagem"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTipoViagem" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnLimparForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/lblAdicionarDespesa"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:onClick="limparFormulario"
+        android:text="@string/lblLimparForm"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

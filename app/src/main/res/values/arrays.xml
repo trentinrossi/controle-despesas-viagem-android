@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_veiculos">
+        <item>@string/selecione</item>
+        <item>@string/alugado</item>
+        <item>@string/emprestado</item>
+        <item>@string/particular</item>
+        <item>@string/uber</item>
+    </string-array>
+</resources>

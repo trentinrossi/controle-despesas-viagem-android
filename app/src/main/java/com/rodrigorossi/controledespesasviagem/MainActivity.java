@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroupTipoViagem;
     private RadioButton radioButtonSelected;
     private CheckBox checkBoxReembolsar;
+    private Spinner spinnerTipoVeiculo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editKmFinal = findViewById(R.id.editKmFinal);
         radioGroupTipoViagem = findViewById(R.id.radioGroupTipoViagem);
         checkBoxReembolsar = findViewById(R.id.checkBoxReembolsar);
+        spinnerTipoVeiculo = findViewById(R.id.spinnerTipoVeiculo);
     }
 
     /**
@@ -55,12 +58,15 @@ public class MainActivity extends AppCompatActivity {
             radioButtonSelected = findViewById(radioGroupTipoViagem.getCheckedRadioButtonId());
             String tipoViagem = radioButtonSelected.getText().toString();
 
+            // Recupera o tipo do veículo que foi selecionado
+            String tipoVeiculo = spinnerTipoVeiculo.getSelectedItem().toString();
+
             this.isEmViagem = true;
             findViewById(R.id.btnIniciarViagem).setEnabled(false);
             findViewById(R.id.btnFinalizarViagem).setEnabled(true);
             findViewById(R.id.btnLimparForm).setEnabled(false);
 
-            String msgViagemIniciada = "Viagem à "+tipoViagem+" iniciada...";
+            String msgViagemIniciada = "Viagem à "+tipoViagem+" iniciada usando um veículo " + tipoVeiculo;
             Toast.makeText(this, msgViagemIniciada, Toast.LENGTH_SHORT).show();
         }
     }
@@ -94,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         editKmFinal.setText(null);
         radioGroupTipoViagem.clearCheck();
         checkBoxReembolsar.setChecked(false);
+        spinnerTipoVeiculo.setSelection(0);
     }
 
     /**
@@ -130,6 +137,12 @@ public class MainActivity extends AppCompatActivity {
         // Motivo da Viagem
         if (radioGroupTipoViagem.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, R.string.lblTipoViagem_mandatory, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        // Tipo do Veículo
+        if (spinnerTipoVeiculo.getSelectedItemPosition() == 0) {
+            Toast.makeText(this, R.string.spinnerTipo_mandatory, Toast.LENGTH_SHORT).show();
             return false;
         }
 

@@ -13,10 +13,19 @@
     <string name="lblPessoal">Pessoal</string>
     <string name="lblLazer">Lazer</string>
     <string name="lblReembolsar">Reembolsar</string>
+    <string name="lblLimparForm">Limpar Formulário</string>
+    <string name="lblSelecioneTipoVeiculo">Tipo do Veículo</string>
 
+    <!-- Validações de campos -->
     <string name="lblDestino_mandatory">É obrigatório informar um destino</string>
     <string name="lblKmInicial_mandatory">É obrigatório informar a quilometragem inicial</string>
     <string name="lblKmFinal_mandatory">É obrigatório informar a quilometragem inicial</string>
     <string name="lblTipoViagem_mandatory">É obrigatório informar um tipo de viagem</string>
-    <string name="lblLimparForm">Limpar Formulário</string>
+    <string name="spinnerTipo_mandatory">É obrigatório informar um tipo de veículo</string>
+
+    <string name="selecione">Selecione...</string>
+    <string name="particular">Particular</string>
+    <string name="alugado">Alugado</string>
+    <string name="emprestado">Emprestado</string>
+    <string name="uber">Uber</string>
 </resources>

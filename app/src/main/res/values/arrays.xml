@@ -7,4 +7,56 @@
         <item>@string/particular</item>
         <item>@string/uber</item>
     </string-array>
+
+    <string-array name="destinos">
+        <item>@string/foz_do_iguacu</item>
+        <item>@string/blumenau</item>
+        <item>@string/cascavel</item>
+        <item>@string/curitiba</item>
+        <item>@string/londres</item>
+        <item>@string/maceio</item>
+        <item>@string/medianeira</item>
+        <item>@string/pato_branco</item>
+        <item>@string/toledo</item>
+        <item>@string/maringa</item>
+    </string-array>
+
+    <integer-array name="kmInicial">
+        <item>12345</item>
+        <item>33256</item>
+        <item>65465</item>
+        <item>12546</item>
+        <item>88745</item>
+        <item>66326</item>
+        <item>1236</item>
+        <item>99875</item>
+        <item>665465</item>
+        <item>654565</item>
+    </integer-array>
+
+    <integer-array name="kmFinal">
+        <item>123123</item>
+        <item>1233332</item>
+        <item>23323</item>
+        <item>34555</item>
+        <item>345798</item>
+        <item>99677</item>
+        <item>56456</item>
+        <item>22344</item>
+        <item>34566</item>
+        <item>45543</item>
+    </integer-array>
+
+    <string-array name="tiposViagem">
+        <item>@string/lblViagemTrabalho</item>
+        <item>@string/lblLazer</item>
+        <item>@string/lblPessoal</item>
+        <item>@string/lblLazer</item>
+        <item>@string/lblLazer</item>
+        <item>@string/lblViagemTrabalho</item>
+        <item>@string/lblPessoal</item>
+        <item>@string/lblViagemTrabalho</item>
+        <item>@string/lblPessoal</item>
+        <item>@string/lblLazer</item>
+    </string-array>
 </resources>

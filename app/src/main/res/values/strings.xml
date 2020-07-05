@@ -1,4 +1,7 @@
 <resources>
+    <string name="recebeu_click">"\nRecebeu um click!"</string>
+    <string name="recebeu_click_longo">"\nRecebeu um click longo!"</string>
+
     <string name="app_name">Controle Despesas Viagem</string>
     <string name="lblCodigo">Código</string>
     <string name="lblDataInicial">Data Inicio da Viagem</string>
@@ -28,4 +31,17 @@
     <string name="alugado">Alugado</string>
     <string name="emprestado">Emprestado</string>
     <string name="uber">Uber</string>
+    <string name="lblTipoViagem">Tipo da Viagem</string>
+
+    <!-- Lista de Destinos -->
+    <string name="foz_do_iguacu">Foz do Iguaçu</string>
+    <string name="blumenau">Blumenau</string>
+    <string name="cascavel">Cascavel</string>
+    <string name="curitiba">Curitiba</string>
+    <string name="maceio">Maceió</string>
+    <string name="londres">Londres</string>
+    <string name="pato_branco">Pato Branco</string>
+    <string name="medianeira">Medianeira</string>
+    <string name="toledo">Toledo</string>
+    <string name="maringa">Maringá</string>
 </resources>

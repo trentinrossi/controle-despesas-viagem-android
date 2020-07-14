@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -149,5 +150,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void mostraActivitySobre(View view) {
+        Intent intent = new Intent(this,DadosAutoraisActivity.class);
+        startActivity(intent);
     }
 }

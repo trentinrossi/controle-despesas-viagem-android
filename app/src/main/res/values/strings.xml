@@ -44,4 +44,12 @@
     <string name="medianeira">Medianeira</string>
     <string name="toledo">Toledo</string>
     <string name="maringa">Maringá</string>
+    <string name="lblDescricaoApp">Este App realiza o registro e controle das despesas de viagem</string>
+    <string name="lblNomeAluno">Nome do Aluno:</string>
+    <string name="lblCurso">Curso:</string>
+    <string name="lblEmail">Email:</string>
+    <string name="lblRodrigo">RODRIGO TRENTIN ROSSI</string>
+    <string name="lblEspecializacao">ESPECIALIZAÇÃO EM JAVA</string>
+    <string name="lblRdrg">rdrg.rossi@gmail.com</string>
+    <string name="lblSobre">Sobre</string>
 </resources>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton radioButtonSelected;
     private CheckBox checkBoxReembolsar;
     private Spinner spinnerTipoVeiculo;
+
+    // Dados que são trafegados entre activities
+    public static String KEY_DESTINO = "DESTINO";
+    public static String KEY_KMINICIAL = "KMINICIAL";
+    public static String KEY_KMFINAL = "KMFINAL";
+    public static String KEY_TIPO = "TIPO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +78,25 @@ public class MainActivity extends AppCompatActivity {
 
             String msgViagemIniciada = "Viagem à "+tipoViagem+" iniciada usando um veículo " + tipoVeiculo;
             Toast.makeText(this, msgViagemIniciada, Toast.LENGTH_SHORT).show();
+
+            if (ViagemList.PEDIR_VIAGEM == 1) {
+                Intent intent = new Intent();
+                intent.putExtra(KEY_DESTINO, editDestino.getText().toString());
+                intent.putExtra(KEY_KMINICIAL, Integer.parseInt(editKmInicial.getText().toString()));
+                intent.putExtra(KEY_KMFINAL, Integer.parseInt(editKmFinal.getText().toString()));
+                intent.putExtra(KEY_TIPO, tipoViagem);
+
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+            }
+
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        setResult(Activity.RESULT_CANCELED);
+        finish();
     }
 
     /**
@@ -150,10 +175,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
-    }
-
-    public void mostraActivitySobre(View view) {
-        Intent intent = new Intent(this,DadosAutoraisActivity.class);
-        startActivity(intent);
     }
 }

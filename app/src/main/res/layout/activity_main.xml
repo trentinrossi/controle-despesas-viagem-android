@@ -201,15 +201,4 @@
         app:layout_constraintStart_toStartOf="@+id/checkBoxReembolsar"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxReembolsar" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="10dp"
-        android:onClick="mostraActivitySobre"
-        android:text="@string/lblSobre"
-        app:layout_constraintStart_toStartOf="@+id/btnIniciarViagem"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarViagem" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

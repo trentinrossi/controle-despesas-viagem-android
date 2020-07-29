@@ -105,35 +105,6 @@
         app:layout_constraintEnd_toEndOf="@+id/editDestino"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <Button
-        android:id="@+id/btnIniciarViagem"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="?attr/colorPrimaryDark"
-        android:onClick="iniciarViagem"
-        android:text="@string/lblIniciarViagem"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroupTipoViagem"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/radioGroupTipoViagem"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerTipoVeiculo" />
-
-    <Button
-        android:id="@+id/btnFinalizarViagem"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:enabled="false"
-        android:onClick="finalizarViagem"
-        android:text="@string/lblFinalizarViagem"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoVeiculo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerTipoVeiculo" />
-
     <RadioGroup
         android:id="@+id/radioGroupTipoViagem"
         android:layout_width="141dp"
@@ -179,18 +150,6 @@
         android:entries="@array/tipos_veiculos"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btnLimparForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:onClick="limparFormulario"
-        android:text="@string/lblLimparForm"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoVeiculo"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/radioGroupTipoViagem"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupTipoViagem" />
 
     <TextView
         android:id="@+id/textView"

@@ -9,8 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DadosAutoraisActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".DadosAutoraisActivity"
+            android:parentActivityName=".ViagemList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ViagemList" />
+        </activity>
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".ViagemList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ViagemList" />
         </activity>
         <activity android:name=".ViagemList">
             <intent-filter>

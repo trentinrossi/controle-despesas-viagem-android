@@ -2,6 +2,9 @@
     <string name="recebeu_click">"\nRecebeu um click!"</string>
     <string name="recebeu_click_longo">"\nRecebeu um click longo!"</string>
 
+    <string name="nova_viagem">Nova Viagem</string>
+    <string name="alterar_viagem">Alterar Viagem</string>
+
     <string name="app_name">Controle Despesas Viagem</string>
     <string name="lblCodigo">Código</string>
     <string name="lblDataInicial">Data Inicio da Viagem</string>
@@ -52,4 +55,8 @@
     <string name="lblEspecializacao">ESPECIALIZAÇÃO EM JAVA</string>
     <string name="lblRdrg">rdrg.rossi@gmail.com</string>
     <string name="lblSobre">Sobre</string>
+    <string name="lblSalvar">Salvar</string>
+    <string name="lblAdicionar">Adicionar</string>
+    <string name="lblEditar">Editar</string>
+    <string name="lblExcluir">Excluir</string>
 </resources>

@@ -59,4 +59,7 @@
     <string name="lblAdicionar">Adicionar</string>
     <string name="lblEditar">Editar</string>
     <string name="lblExcluir">Excluir</string>
+    <string name="lblOrdenacao">Ordenar</string>
+    <string name="lblAscendente">Ascendente</string>
+    <string name="lblDescendente">Descendente</string>
 </resources>

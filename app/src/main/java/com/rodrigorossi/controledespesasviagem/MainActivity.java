@@ -2,9 +2,12 @@ package com.rodrigorossi.controledespesasviagem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -161,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
                 iniciarViagem();
                 return true;
             case android.R.id.home:
+                onBackPressed();
+                return true;
             case R.id.menuitem_main_limpar:
                 limparFormulario();
                 return true;

@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.ActionMode;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -19,6 +21,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ViagemList extends AppCompatActivity {
     private ListView             listViewViagens;
@@ -27,6 +31,12 @@ public class ViagemList extends AppCompatActivity {
     private View       viewSelecionada;
     private ActionMode actionMode;
     private int        posicaoSelecionada = -1;
+
+    private static final String ARQUIVO = "com.rodrigorossi.controledespesasviagem.PREFERENCIAS_ORDENACAO";
+    private static final String ORDEM = "ORDEM";
+    private static final String ASC = "ASC";
+    private static final String DESC = "DESC";
+    private String opcao_tipo = "ASC";
 
     private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
 
@@ -113,12 +123,45 @@ public class ViagemList extends AppCompatActivity {
                 });
 
         inicializaLista();
+        lerPreferenciasOrdenacao();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.viagemlist_menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item;
+        switch (opcao_tipo) {
+            case ASC:
+                item = menu.findItem(R.id.app_bar_switch_asc);
+                break;
+            case DESC:
+                item = menu.findItem(R.id.app_bar_switch_desc);
+                break;
+            default:
+                return false;
+        }
+        item.setChecked(true);
+        return true;
+    }
+
+    private void lerPreferenciasOrdenacao() {
+        SharedPreferences shared = getSharedPreferences(ARQUIVO, Context.MODE_PRIVATE);
+        opcao_tipo = shared.getString(ORDEM, opcao_tipo);
+        ordenarItemLista(opcao_tipo);
+    }
+
+    private void salvarPreferenciaOrdenacao(String novoValor) {
+        SharedPreferences shared = getSharedPreferences(ARQUIVO, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
+        editor.putString(ORDEM, novoValor);
+        editor.commit();
+        opcao_tipo = novoValor;
+        ordenarItemLista(novoValor);
     }
 
     private void inicializaLista() {
@@ -142,6 +185,25 @@ public class ViagemList extends AppCompatActivity {
     private void alterarItemLista() {
         Viagem v = viagens.get(posicaoSelecionada);
         MainActivity.alterarViagem(this, v);
+    }
+
+    private void ordenarItemLista(String tipo) {
+        if (tipo.equalsIgnoreCase(ASC)) {
+            Collections.sort(viagens, new Comparator<Viagem>() {
+                @Override
+                public int compare(Viagem viagem, Viagem t1) {
+                    return viagem.getDestino().compareToIgnoreCase(t1.getDestino());
+                }
+            });
+        } else if (tipo.equalsIgnoreCase(DESC)) {
+            Collections.sort(viagens, new Comparator<Viagem>() {
+                @Override
+                public int compare(Viagem viagem, Viagem t1) {
+                    return t1.getDestino().compareToIgnoreCase(viagem.getDestino());
+                }
+            });
+        }
+        viagemAdapter.notifyDataSetChanged();
     }
 
 
@@ -182,6 +244,12 @@ public class ViagemList extends AppCompatActivity {
                 return true;
             case R.id.menuItemSobre:
                 mostraActivitySobre(item);
+                return true;
+            case R.id.app_bar_switch_asc:
+                salvarPreferenciaOrdenacao(ASC);
+                return true;
+            case R.id.app_bar_switch_desc:
+                salvarPreferenciaOrdenacao(DESC);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

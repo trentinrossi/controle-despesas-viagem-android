@@ -3,12 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menuItemSobre"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:onClick="mostraActivitySobre"
+        android:title="@string/lblSobre"
+        app:showAsAction="ifRoom"></item>
+    <item
         android:id="@+id/menuItemAdicionar"
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/lblAdicionar"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/menuItemSobre"
-        android:onClick="mostraActivitySobre"
-        android:title="@string/lblSobre" />
+    <group
+        android:id="@+id/groupOrdem"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/app_bar_switch_asc"
+            android:title="@string/lblAscendente" />
+        <item
+            android:id="@+id/app_bar_switch_desc"
+            android:title="@string/lblDescendente" />
+    </group>
 </menu>

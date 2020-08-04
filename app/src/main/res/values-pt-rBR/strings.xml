@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Controle de despesas de viagem</string>
+    <string name="recebeu_click_longo">Click longo</string>
+    <string name="nova_viagem">Nova viagem</string>
+    <string name="alterar_viagem">Editar viagem</string>
+    <string name="lblCodigo">Código</string>
+    <string name="lblDataInicial">Data inicial</string>
+    <string name="lblDataFinal">Data final</string>
+    <string name="lblDestino">Destino</string>
+    <string name="lblKmInicial">Km Inicial</string>
+    <string name="lblKmFinal">Km Final</string>
+    <string name="lblIniciarViagem">Iniciar viagem</string>
+    <string name="lblFinalizarViagem">Finalizar Viagem</string>
+    <string name="lblAdicionarDespesa">Adicionar despesa</string>
+    <string name="lblViagemTrabalho">Trabalho</string>
+    <string name="lblPessoal">Pessoal</string>
+    <string name="lblLazer">Lazer</string>
+    <string name="lblReembolsar">Reembolsar</string>
+    <string name="lblLimparForm">Limpar Formulario</string>
+    <string name="lblSelecioneTipoVeiculo">Tipo Veículo</string>
+    <string name="lblDestino_mandatory">Destino é obrigatório</string>
+    <string name="lblKmInicial_mandatory">KM inicial é obrigatório</string>
+    <string name="lblKmFinal_mandatory">KM final é obrigatório</string>
+    <string name="lblTipoViagem_mandatory">Tipo da viagem é obrigatório</string>
+    <string name="spinnerTipo_mandatory">Tipo do veículo é obrigatório</string>
+    <string name="selecione">Selecionar...</string>
+    <string name="particular">Particular</string>
+    <string name="alugado">Alugado</string>
+    <string name="emprestado">Emprestado</string>
+    <string name="lblTipoViagem">Tipo da Viagem</string>
+    <string name="lblDescricaoApp">App para controle e gerenciamento de suas viagens!</string>
+    <string name="lblNomeAluno">Nome aluno:</string>
+    <string name="lblCurso">Curso:</string>
+    <string name="lblEspecializacao">ESPECIALIZAÇÃO EM JAVA</string>
+    <string name="lblSobre">Sobre</string>
+    <string name="lblSalvar">Salvar</string>
+    <string name="lblAdicionar">Adicionar</string>
+    <string name="lblEditar">Editar</string>
+    <string name="lblExcluir">Excluir</string>
+    <string name="lblOrdenacao">Ordenar</string>
+    <string name="lblAscendente">Ascendente</string>
+    <string name="lblDescendente">Descendente</string>
+    <string name="recebeu_click">Click curto</string>
+    <string name="lblViagema">Viagem para</string>
+    <string name="lblIniciadaUsando">iniciada usando um veículo</string>
+</resources>

@@ -133,7 +133,11 @@ public class MainActivity extends AppCompatActivity {
 //            findViewById(R.id.btnFinalizarViagem).setEnabled(true);
 //            findViewById(R.id.btnLimparForm).setEnabled(false);
 
-            String msgViagemIniciada = "Viagem à "+tipoViagem+" iniciada usando um veículo " + tipoVeiculo;
+            // Recupera o tipo de viagem que foi selecionado
+            radioButtonSelected = findViewById(radioGroupTipoViagem.getCheckedRadioButtonId());
+            String tipoViagemToast = radioButtonSelected.getText().toString();
+
+            String msgViagemIniciada = getString(R.string.lblViagema)+" "+ tipoViagemToast +" "+ getString(R.string.lblIniciadaUsando) +" "+ tipoVeiculo;
             Toast.makeText(this, msgViagemIniciada, Toast.LENGTH_SHORT).show();
 
             if (ViagemList.PEDIR_VIAGEM_NOVA == 1) {
